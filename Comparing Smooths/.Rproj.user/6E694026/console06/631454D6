@@ -1,0 +1,62 @@
+]0;~/Documents/Projects/Data Science/ODSC/Comparing Smooths[?1034hShelbys-MacBook-Air:Comparing Smooths brandondey$ pwd
+/Users/brandondey/Documents/Projects/Data Science/ODSC/Comparing Smooths
+]0;~/Documents/Projects/Data Science/ODSC/Comparing SmoothsShelbys-MacBook-Air:Comparing Smooths brandondey$ cd ../
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ pwd
+/Users/brandondey/Documents/Projects/Data Science/ODSC
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ 
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ echo "# ODSC" >> README.md
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git init
+Initialized empty Git repository in /Users/brandondey/Documents/Projects/Data Science/ODSC/.git/
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git add README.md
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git commit -m "first commit"
+[master (root-commit) 5ba18c3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git remote add origin https://github.com/brandondey/ODSC.git
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git push -u origin master
+To https://github.com/brandondey/ODSC.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/brandondey/ODSC.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git puo[Kll
+warning: no common commits
+remote: Counting objects: 3, done.[K
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From https://github.com/brandondey/ODSC
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git pullsh -u origin masterremote add origin https://github.com/brandondey/ODSC.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[32Pcommit -m "first commit"[11Padd README.mdinit[Kecho "# ODSC" >> README.mdpwd[K
+/Users/brandondey/Documents/Projects/Data Science/ODSC
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ echo "# ODSC" >> README.md
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git init
+Reinitialized existing Git repository in /Users/brandondey/Documents/Projects/Data Science/ODSC/.git/
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git add README.md
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git commit -m "first commit"
+[master 02d1033] first commit
+ 1 file changed, 1 insertion(+)
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git remote add origin https://github.com/brandondey/ODSC.git
+fatal: remote origin already exists.
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 442 bytes | 147.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/brandondey/ODSC.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git add[K[K[Kco[K[K[Kadd[K[K[K add .

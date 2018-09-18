@@ -1,0 +1,96 @@
+---
+title: ' Breweries & Brew Pubs in the USA'
+author: "Vivek Mangipudi"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 4
+    toc_float: no
+---
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+#Breweries & Brew Pubs in the USA
+
+library(ggplot2)
+library(readr)
+library(leaflet)
+library(knitr)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(plotly)
+library(maps)
+library(ggmap)
+library(gridExtra)
+
+datz <- read_csv("../input/7160_1.csv")
+```
+
+```{r,echo = FALSE}
+datz %>%
+   select(province) %>%
+   group_by(province) %>%
+   summarize(Total =n()) ->df
+dfc<-df
+
+df$hover <- with(df, paste("Total Breweries", `Total`))
+# give state boundaries a black border
+l <- list(color = toRGB("black"), width = 1)
+
+# specify some map projection/options
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('Blue')
+)
+
+```
+# Plotting counts by state on a map
+```{r,echo = FALSE}
+
+library(plotly)
+
+plot_ly(df, z = df$`Total`, text = df$hover, locations = df$province, type = 'choropleth',
+        locationmode = 'USA-states', color = df$`Total`, colors = 'Purples',
+        marker = list(line = l), colorbar = list(title = "Number")) %>%
+  layout(title = 'Breweries by State<br>(Hover for breakdown)', geo = g)
+```
+<br>
+
+# Plotting locations on map   (Interactive) 
+
+<p> There are about 1961 missing long-lat pairs </p>
+```{r, echo = FALSE}
+datz<-na.omit(datz)
+leaflet(datz) %>% addTiles('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') %>% 
+  setView( -95.7129, 37.0902, zoom = 4) %>% 
+  addCircles(~long, ~lat, popup=datz$name, weight = 3, radius=40, 
+             color="#ffa500", stroke = TRUE, fillOpacity = 0.9) %>% 
+  addLegend("bottomleft", colors= "#ffa500", labels="Locations", title="Pubs-Breweries : USA")
+
+```
+
+<br>
+
+<h4> Ordering States by number of Breweries-Pubs </h4>
+```{r,echo = FALSE}
+dfc<-arrange(dfc,-Total)
+
+kable(dfc)
+```
+<br> 
+
+
+<p> Apart from CA in the west coast, it appears that there are more pub-breweries along the east coast</p> 
+
+
+
+<h3> NOTE: Possible Inconsistencies in data: </h3>
+<p>*1*. One entry is :     
+2930 Centre Ave N E,Bottle Return Centers, Brewers, Wholesale Beer Distributors,Calgary,US,us/ab/calgary/2930centreavene,NA,NA,Brewers Distributor Ltd.  
+4035311057, T2A, 4Y2,AB, http://www.bdl.ca/ </p>  
+<p> This is not in USA, Calgary is in CANADA.</P> <br>
+<p>*2* . The column `province` has most entries as State codes, but some are names of cities ex : Sacramento, Los Angeles, LA,San Diego,St. Louis,Tampa etc.   </p>

@@ -412,50 +412,6 @@ ggplot(interpolated_results,
           alpha = 0.1, 
           size = 0.1)
 
-
-# interpolated_swings %>% 
-#   mutate(swing_in_5s = factor(round(swing_in_5s)))%>% 
-#   ggplot(aes(x = lon, y = lat)) + 
-#   geom_raster( aes(fill = swing_in_5s)) +
-#   scale_fill_manual(values = palette, 
-#                     guide = guide_tinker)  +
-#   xlim(-130,-67) + ylim(24,50) +
-#   theme_void() +
-#   theme(
-#     text = element_text(family = 'Montserrat'),
-#     legend.justification = c(0,0),
-#     legend.position = c(0,0.02),
-#     legend.title = element_text(size = 10),
-#     legend.text = element_text(size = 8),
-#     legend.box.background = element_rect(fill = '#f0f0f0', color = NA)
-#   ) + 
-#   labs(
-#     title = "The United States of Seasons",
-#     subtitle = "Difference between the hottest and coldest days of the year",
-#     fill = "Temp swing in degrees") +
-#   borders('state', alpha = 0.1, size = 0.1)
-
-
-
-
-
-
-leaflet(breweries) %>% addTiles('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 
-                           attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') %>% 
-  setView( -95.7129, 37.0902, zoom = 4) %>% 
-  addCircles(~long, ~lat, popup = datz$name, 
-             weight = 3, 
-             radius=40, 
-             color="#ffa500", stroke = TRUE, fillOpacity = 0.9) %>% 
-  addLegend("bottomleft", colors= "#ffa500", labels="Locations", title="Pubs-Breweries : USA")
-
-
-ggplot(interpolated_results, aes(x = lon, y = lat)) + 
-  xlim(-125, -65) + ylim(24, 51) + 
-  theme_void() +
-  labs(fill = "Temp swing in degrees") +
-  borders('state', alpha = 0.1, size = 0.1)
-
 ###############################################################################
 ## GRAVEYARD ##################################################################
 ###############################################################################
@@ -498,3 +454,19 @@ cities %>%
   mutate(lat = as.numeric(gsub(x = cities$lat, pattern = "\\(", replacement = "")), 
          long = as.numeric(gsub(x = cities$long, pattern = "\\)", replacement = ""))) -> cities
 
+
+leaflet(breweries) %>% addTiles('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 
+                           attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') %>% 
+  setView( -95.7129, 37.0902, zoom = 4) %>% 
+  addCircles(~long, ~lat, popup = datz$name, 
+             weight = 3, 
+             radius=40, 
+             color="#ffa500", stroke = TRUE, fillOpacity = 0.9) %>% 
+  addLegend("bottomleft", colors= "#ffa500", labels="Locations", title="Pubs-Breweries : USA")
+
+
+ggplot(interpolated_results, aes(x = lon, y = lat)) + 
+  xlim(-125, -65) + ylim(24, 51) + 
+  theme_void() +
+  labs(fill = "Temp swing in degrees") +
+  borders('state', alpha = 0.1, size = 0.1)

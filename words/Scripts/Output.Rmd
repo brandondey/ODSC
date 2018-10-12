@@ -1,0 +1,50 @@
+---
+title: "Table Output"
+author: "Brandon Dey"
+date: "10/7/2018"
+output:
+  html_document: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+options(knitr.table.format = "html")
+
+
+```
+
+
+
+``` {r}
+
+library(syuzhet)
+library(magrittr)
+library(sentimentr)
+library(tidyverse)
+library(kableExtra)
+
+
+pie <- c("I love apple pie", 
+         "I don't love apple pie", 
+         "I really really love apple pie!!!",
+          "I hate apple pie", 
+          "I don't hate apple pie", 
+          "Sometimes I love apple pie, and other times I'm not really feeling it")
+
+cbind(opinion = pie, sentimentr::sentiment(pie), syuzhet_sentiment = syuzhet::get_sentiment(pie)) -> df
+
+df %>% 
+  rename(sentimentr_sentiment = sentiment) %>%
+  select(opinion, sentimentr_sentiment, syuzhet_sentiment) -> df
+
+df %>% 
+  knitr::kable() %>%
+  kable_styling()
+
+```
+

@@ -60,3 +60,97 @@ To https://github.com/brandondey/ODSC.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git add[K[K[Kco[K[K[Kadd[K[K[K add .
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ ad[K[Kgit a[Kstt[Katus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   .DS_Store[m
+	[32mnew file:   Comparing Smoothers/.RData[m
+	[32mnew file:   Comparing Smoothers/.Rhistory[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/console06/B799CC5C[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/console06/INDEX001[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/pcs/files-pane.pper[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/pcs/source-pane.pper[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/pcs/windowlayoutstate.pper[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/pcs/workbench-pane.pper[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/rmd-outputs[m
+	[32mnew file:   Comparing Smoothers/.Rproj.user/6E694026/saved_source_markers[m
+	[32mnew file:   Comparing Smooths/.DS_Store[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/console06/631454D6[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/console06/631454D6.env[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/console06/INDEX001[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/sources/prop/5E9F7249[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/sources/prop/INDEX[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/ADC45209[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/ADC45209-contents[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/lock_file[m
+	[32mnew file:   Comparing Smooths/.Rproj.user/shared/notebooks/patch-chunk-names[m
+	[32mnew file:   Comparing Smooths/Comparing Smoothers.Rproj[m
+	[32mnew file:   Comparing Smooths/Plots/.DS_Store[m
+	[32mnew file:   Comparing Smooths/Plots/ema.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/gam.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/loess - default.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/loess - wiggly.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/loesses.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/sma.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/sma_ema.jpeg[m
+	[32mnew file:   Comparing Smooths/Plots/spline n.jpeg[m
+	[32mnew file:   Comparing Smooths/Scripts/.DS_Store[m
+	[32mnew file:   Comparing Smooths/Scripts/0.0 - Comparing Smoothers.R[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Comparing Smooths/.Rproj.user/6E694026/console06/631454D6[m
+
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git commit -m "commit"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master 1eef21e] commit
+ 33 files changed, 1176 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Comparing Smoothers/.RData
+ create mode 100644 Comparing Smoothers/.Rhistory
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/console06/B799CC5C
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/console06/INDEX001
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/pcs/files-pane.pper
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/pcs/source-pane.pper
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/pcs/windowlayoutstate.pper
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/pcs/workbench-pane.pper
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/rmd-outputs
+ create mode 100644 Comparing Smoothers/.Rproj.user/6E694026/saved_source_markers
+ create mode 100644 Comparing Smooths/.DS_Store
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/console06/631454D6
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/console06/631454D6.env
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/console06/INDEX001
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/sources/prop/5E9F7249
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/sources/prop/INDEX
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/ADC45209
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/ADC45209-contents
+ create mode 100644 Comparing Smooths/.Rproj.user/6E694026/sources/s-9D3E567B/lock_file
+ create mode 100644 Comparing Smooths/.Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 Comparing Smooths/Comparing Smoothers.Rproj
+ create mode 100644 Comparing Smooths/Plots/.DS_Store
+ create mode 100644 Comparing Smooths/Plots/ema.jpeg
+ create mode 100644 Comparing Smooths/Plots/gam.jpeg
+ create mode 100644 Comparing Smooths/Plots/loess - default.jpeg
+ create mode 100644 Comparing Smooths/Plots/loess - wiggly.jpeg
+ create mode 100644 Comparing Smooths/Plots/loesses.jpeg
+ create mode 100644 Comparing Smooths/Plots/sma.jpeg
+ create mode 100644 Comparing Smooths/Plots/sma_ema.jpeg
+ create mode 100644 Comparing Smooths/Plots/spline n.jpeg
+ create mode 100644 Comparing Smooths/Scripts/.DS_Store
+ create mode 100644 Comparing Smooths/Scripts/0.0 - Comparing Smoothers.R
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ git push -u orign[Kin master
+Counting objects: 49, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/41)   Compressing objects:   4% (2/41)   Compressing objects:   7% (3/41)   Compressing objects:   9% (4/41)   Compressing objects:  12% (5/41)   Compressing objects:  14% (6/41)   Compressing objects:  17% (7/41)   Compressing objects:  19% (8/41)   Compressing objects:  21% (9/41)   Compressing objects:  24% (10/41)   Compressing objects:  26% (11/41)   Compressing objects:  29% (12/41)   Compressing objects:  31% (13/41)   Compressing objects:  34% (14/41)   Compressing objects:  36% (15/41)   Compressing objects:  39% (16/41)   Compressing objects:  41% (17/41)   Compressing objects:  43% (18/41)   Compressing objects:  46% (19/41)   Compressing objects:  48% (20/41)   Compressing objects:  51% (21/41)   Compressing objects:  53% (22/41)   Compressing objects:  56% (23/41)   Compressing objects:  58% (24/41)   Compressing objects:  60% (25/41)   Compressing objects:  63% (26/41)   Compressing objects:  65% (27/41)   Compressing objects:  68% (28/41)   Compressing objects:  70% (29/41)   Compressing objects:  73% (30/41)   Compressing objects:  75% (31/41)   Compressing objects:  78% (32/41)   Compressing objects:  80% (33/41)   Compressing objects:  82% (34/41)   Compressing objects:  85% (35/41)   Compressing objects:  87% (36/41)   Compressing objects:  90% (37/41)   Compressing objects:  92% (38/41)   Compressing objects:  95% (39/41)   Compressing objects:  97% (40/41)   Compressing objects: 100% (41/41)   Compressing objects: 100% (41/41), done.
+Writing objects:   2% (1/49)   Writing objects:   4% (2/49)   Writing objects:  10% (5/49)   Writing objects:  12% (6/49)   Writing objects:  14% (7/49)   Writing objects:  16% (8/49)   Writing objects:  18% (9/49)   Writing objects:  20% (10/49)   Writing objects:  22% (11/49)   Writing objects:  24% (12/49)   Writing objects:  28% (14/49)   Writing objects:  30% (15/49)   Writing objects:  32% (16/49)   Writing objects:  34% (17/49)   Writing objects:  36% (18/49)   Writing objects:  38% (19/49)   Writing objects:  40% (20/49)   Writing objects:  42% (21/49)   Writing objects:  44% (22/49)   Writing objects:  46% (23/49)   Writing objects:  48% (24/49)   Writing objects:  51% (25/49)   Writing objects:  53% (26/49)   Writing objects:  55% (27/49)   Writing objects:  57% (28/49)   Writing objects:  59% (29/49)   Writing objects:  61% (30/49)   Writing objects:  63% (31/49)   Writing objects:  65% (32/49)   Writing objects:  67% (33/49)   Writing objects:  69% (34/49)   Writing objects:  71% (35/49)   Writing objects:  73% (36/49)   Writing objects:  75% (37/49)   Writing objects:  77% (38/49)   Writing objects:  79% (39/49)   Writing objects:  81% (40/49)   Writing objects:  81% (40/49), 1.07 MiB | 313.00 KiB/s   Writing objects:  83% (41/49), 1.07 MiB | 313.00 KiB/s   Writing objects:  83% (41/49), 1.44 MiB | 362.00 KiB/s   Writing objects:  85% (42/49), 1.44 MiB | 362.00 KiB/s   Writing objects:  87% (43/49), 1.81 MiB | 406.00 KiB/s   Writing objects:  87% (43/49), 2.19 MiB | 441.00 KiB/s   Writing objects:  89% (44/49), 2.19 MiB | 441.00 KiB/s   Writing objects:  89% (44/49), 2.75 MiB | 448.00 KiB/s   Writing objects:  91% (45/49), 2.75 MiB | 448.00 KiB/s   Writing objects:  91% (45/49), 3.50 MiB | 486.00 KiB/s   Writing objects:  93% (46/49), 3.50 MiB | 486.00 KiB/s   Writing objects:  95% (47/49), 3.94 MiB | 510.00 KiB/s   Writing objects:  97% (48/49), 5.00 MiB | 749.00 KiB/s   Writing objects: 100% (49/49), 5.00 MiB | 749.00 KiB/s   Writing objects: 100% (49/49), 5.02 MiB | 574.00 KiB/s, done.
+Total 49 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), done.[K
+To https://github.com/brandondey/ODSC.git
+   02d1033..1eef21e  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Documents/Projects/Data Science/ODSCShelbys-MacBook-Air:ODSC brandondey$ 
